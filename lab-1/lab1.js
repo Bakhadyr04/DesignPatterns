@@ -80,11 +80,11 @@ console.log();
 // Утка приманка
 const DuckPrimanka = new Duck("Утка приманка");
 DuckPrimanka.DuckQuack = new quackDolgo;
-DuckPrimanka.DuckFlyfly = new flyRadioupravleniye;
+DuckPrimanka.DuckFly = new flyRadioupravleniye;
 
 console.log(DuckPrimanka.DuckName);
 DuckPrimanka.quack();
-DuckPrimanka.fly();
+DuckPrimanka;
 
 console.log();
 
