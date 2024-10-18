@@ -1,0 +1,49 @@
+@startuml
+class CoffeeOrder {
+    - beverage: Object
+    - addons: List<Object>
+    - volume: float
+    - extra: Object
+    + constructor(beverage: Object)
+    + addAddon(addon: Object): void
+    + setVolume(volume: float): void
+    + setExtra(extra: Object): void
+    + prepareOrder(callback: function): void
+    + heatWater(): void
+    + addIngredients(): void
+    + serve(): void
+    + processPayment(callback: function): void
+}
+
+class Beverage {
+    - name: string
+    - cost: float
+    - requiresHeat: boolean
+}
+
+class Addon {
+    - name: string
+    - cost: float
+}
+
+class Volume {
+    - volume: float
+    - cost: float
+}
+
+class Extra {
+    - name: string
+    - cost: float
+}
+
+class PaymentMethods {
+    + processPayment(): void
+}
+
+CoffeeOrder --> Beverage
+CoffeeOrder --> Addon
+CoffeeOrder --> Volume
+CoffeeOrder --> Extra
+CoffeeOrder --> PaymentMethods
+
+@enduml
